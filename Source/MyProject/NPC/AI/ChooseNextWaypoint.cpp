@@ -3,11 +3,11 @@
 #include "ChooseNextWaypoint.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "AIController.h"
-#include "PatrolRoute.h"
+#include "NPC/PatrolRoute.h"
 
 EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent & OwnerComp, uint8 * NodeMemory)
 {
-	// TODO protect against empty patrol routes and empty pawns
+	// TODO protect against empty pawns
 
 	// Get patrol points
 	auto Guard = OwnerComp.GetAIOwner()->GetPawn();
